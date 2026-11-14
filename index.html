@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Abandoned but not Forgotten | Space Heritage Explorer</title>
+<meta name="description" content="Rotate the Moon and Mars and follow the stories of equipment left behind.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<canvas id="stars" aria-hidden="true"></canvas>
+<header class="hero">
+  <p class="eyebrow">NASA Space Apps Challenge 2026</p>
+  <h1>Abandoned but not Forgotten</h1>
+  <p class="lead">Rotate the Moon and Mars, find the hardware humans left behind, and follow its story from the first landing to the last signal.</p>
+  <div class="cta"><button id="start" class="primary">Start the story</button><a class="btn" href="#explore">Explore the globe</a></div>
+  <dl class="stats" id="stats" aria-label="Collection summary"></dl>
+</header>
+<main>
+  <section id="explore" class="explorer" aria-labelledby="t1">
+    <h2 id="t1">Explore the sites</h2>
+    <div class="tabs" role="group" aria-label="Choose a world">
+      <button data-world="Moon" class="active" aria-pressed="true">Moon</button>
+      <button data-world="Mars" aria-pressed="false">Mars</button>
+    </div>
+    <div class="cta">
+    <button id="start" class="primary">Start the story</button>
+    <a class="btn" href="#explore">Explore the globe</a>
+    <button id="audio-toggle" class="btn" aria-pressed="false">🔇 Sound: Off</button>
+  </div>
+    <div class="stage">
+      <div class="globe-wrap">
+        <canvas id="globe" tabindex="0" aria-label="Rotatable globe. Drag or use arrow keys to rotate."></canvas>
+        <p class="hint">Drag to rotate · click a pin</p>
+      </div>
+      <aside class="panel" id="panel" aria-live="polite"></aside>
+    </div>
+    <div class="list-controls">
+      <label class="sr-only" for="search">Search equipment, mission or site</label>
+      <input id="search" type="text" placeholder="Search equipment, mission or site...">
+      <span id="count"></span>
+    </div>
+    <div id="chips" class="chips"></div>
+  </section>
+
+  <section class="lifespans" aria-labelledby="t2">
+    <h2 id="t2">How long did each one last?</h2>
+    <p class="muted">Each bar runs from arrival to last contact. Select a row to fly to its site.</p>
+    <div id="chart"></div>
+  </section>
+</main>
+<footer>
+  <p>Facts are based on NASA mission pages and images from NASA's Lunar and Mars Reconnaissance Orbiters. Site coordinates are approximate. Built by team Beyond Earth Solo.</p>
+</footer>
+<script src="data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
