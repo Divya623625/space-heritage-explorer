@@ -1,29 +1,62 @@
 # Space Heritage Explorer
+**Abandoned but not Forgotten** | NASA Space Apps Challenge 2026
+Team: Beyond Earth Solo
 
-Challenge: Abandoned but not Forgotten (NASA Space Apps 2026). Open `index.html` to run it; no build step.
+Space Heritage Explorer is an interactive website that tells the stories of equipment humans have left behind on the Moon and Mars. Rotate the globes, click a pin at a landing site, and follow the hardware from the first landing to the last signal.
 
-## Test checklist (2 minutes)
-1. Drag the globe; click a pin.
-2. Click Start the story, then use Earlier and Later (or the arrow keys).
+
+## Challenge
+*Abandoned but not Forgotten: Storytelling about NASA's Discarded Equipment on the Moon and Mars.*
+
+These objects are the first archaeology beyond Earth. Telling their stories builds public appreciation for the history of exploration and for protecting these sites.
+
+## Features
+- Draggable 3D globes of the Moon and Mars, with a pin at each landing site
+- 11 objects: 4 on the Moon and 7 on Mars
+- Detail panel with mission, site, agency, arrival year, last contact, purpose and story
+- "Start the story" walkthrough with Earlier and Later buttons (or the arrow keys)
+- Lifespan chart showing how long each object operated, from arrival to last contact
+- Search by name, mission or site
+- Shareable link to any object (for example `#opportunity-rover`)
+- Link to NASA's image library for more photos of each object
+- Keyboard accessible, responsive, and respects reduced-motion settings
+
+## Objects covered
+| World | Objects |
+|-------|---------|
+| Moon | Surveyor 3, Apollo 11 Lunar Module Descent Stage, Lunokhod 1, Apollo 15 Lunar Roving Vehicle |
+| Mars | Mars 3 Lander, Viking 1 Lander, Viking 2 Lander, Sojourner and Pathfinder Lander, Spirit Rover, Opportunity Rover, Ingenuity Helicopter |
+
+## How to run
+No build step and no dependencies. Open `index.html` in a browser.
+
+## Project structure
+```
+index.html   page structure
+style.css    styling
+data.js      object data and approximate landing-site coordinates
+app.js       globe, star field, panel, chart, search and navigation
+images/      NASA photos, one per object
+```
+
+## Quick test (2 minutes)
+1. Drag the globe and click a pin.
+2. Click **Start the story**, then use Earlier and Later (or the arrow keys).
 3. Switch to Mars and search "rover".
 4. Click a row in the lifespan chart.
 5. Resize to phone width.
 
-## Add photos
-See `images/README.txt` for the exact file names, then reload.
+## Photos
+Photos are loaded from `images/<object-name>.jpg`. Missing files are simply not shown. Photos come from NASA's image library (https://images.nasa.gov).
 
-## Host it free
-**GitHub Pages:** create a repository, upload the files and the images folder, then Settings, Pages, deploy from the main branch. The link is `https://<username>.github.io/<repo>/`.
-**Netlify:** go to app.netlify.com/drop and drag the whole folder in.
+## Built with
+Plain HTML, CSS and JavaScript. The globes and star field are drawn on the canvas, with no frameworks or libraries.
 
-## Fact-check status
-Verified against NASA sources: Viking 1 (renamed Thomas A. Mutch Memorial Station, contact lost November 1982 after a faulty command, imaged by MRO in 2006).
-Still to check on science.nasa.gov or nasa.gov: the other eight stories, especially distances and dates for Lunokhod 1, Opportunity, Spirit and Ingenuity.
-Map coordinates are approximate.
+## Data and credits
+- Mission facts are based on NASA mission pages (nasa.gov and science.nasa.gov).
+- Images are credited to NASA and the relevant mission teams, including NASA's Lunar Reconnaissance Orbiter and Mars Reconnaissance Orbiter.
+- Landing-site coordinates are approximate.
+- Lunokhod 1 and Mars 3 are Soviet missions. Their stories draw on NASA orbiter imagery of the sites.
 
-## Demo video script (about 90 seconds)
-1. (10s) "Every mission leaves hardware behind. This is Space Heritage Explorer, our answer to Abandoned but not Forgotten."
-2. (20s) Show the header counts and the cards. Filter to Mars, then search "rover".
-3. (20s) Open Opportunity and read its story.
-4. (20s) Switch to Timeline, then Map, and click a pin.
-5. (20s) "Built with plain HTML, CSS and JavaScript, using NASA mission information. Thanks for watching."
+## Team
+Beyond Earth Solo, NASA Space Apps Challenge 2026.

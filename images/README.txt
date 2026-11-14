@@ -1,4 +1,3 @@
-Save one NASA photo per object using these exact file names. Missing files are simply not shown.
 Get photos at https://images.nasa.gov (credit NASA and the mission team).
 
 apollo-11-lunar-module-descent-stage.jpg
