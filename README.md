@@ -47,7 +47,7 @@ images/      NASA photos, one per object
 5. Resize to phone width.
 
 ## Photos
-Photos are loaded from `images/<object-name>.jpg`. Missing files are simply not shown. Photos come from NASA's image library (https://images.nasa.gov).
+Photos come from NASA's image library (https://images.nasa.gov).
 
 ## Built with
 Plain HTML, CSS and JavaScript. The globes and star field are drawn on the canvas, with no frameworks or libraries.
